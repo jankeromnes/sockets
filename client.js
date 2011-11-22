@@ -1,6 +1,8 @@
 var net = require('net'),
     socket = new net.Socket();
 
+socket.connect(0x5AD);
+
 socket.write('hello!\n');
 
 socket.on('data', function(data) {
@@ -9,4 +11,4 @@ socket.on('data', function(data) {
   if (str === 'END') {
     socket.destroy();
   }
-}
+});
