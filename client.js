@@ -11,4 +11,4 @@ socket.on('data', function(data) {
   if (str === 'END') {
     socket.destroy();
   }
-}
+});
