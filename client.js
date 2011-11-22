@@ -1,7 +1,7 @@
 var net = require('net'),
     socket = new net.Socket();
 
-socket.connect(0X5AD);
+socket.connect(0x5AD);
 
 socket.write('hello!\n');
 
