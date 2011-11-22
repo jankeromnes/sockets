@@ -1,11 +1,10 @@
 var net = require('net');
 
-var socket = net.Socket();
-
-socket.on('connect', function() {
-  console.log('server connected!');
-  socket.on('data', function(data) {
-    console.log('server received', data);
+var server = net.Server ( function(socket) {
+  console.log('socket says yo!');
+  socket.on('data', function('data') {
+    console.log('socket says',data);
   });
-});
+  socket.write('hi, socket!');
+}).listen(0x5Ad);
 
